@@ -1,0 +1,90 @@
+name: secure_data_wipe
+description: A Flutter application for secure data wiping in trustworthy IT asset recycling.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.17.0 <4.0.0'
+  flutter: ">=2.5.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # UI and Material Design
+  cupertino_icons: ^1.0.2
+  
+  # For responsive design and layout
+  flutter_screenutil: ^5.9.0
+  
+  # For animations and smooth transitions
+  animated_text_kit: ^4.2.2
+  
+  # For platform detection and system information
+  device_info_plus: ^9.1.0
+  platform_detect: ^2.0.7
+  
+  # For better state management (optional)
+  provider: ^6.1.1
+  
+  # For date formatting and utilities
+  intl: ^0.18.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+  # Linting and code analysis
+  flutter_lints: ^2.0.3
+  
+  # For testing
+  mockito: ^5.4.2
+  build_runner: ^2.4.7
+
+# Configuration for Flutter
+flutter:
+  uses-material-design: true
+  
+  # Enable web support
+  web:
+    pluginClass: SecureDataWipeWebPlugin
+  
+  # Assets - Add any custom images or icons here
+  # assets:
+  #   - images/
+  #   - icons/
+  
+  # Custom fonts for better typography
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Roboto-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Roboto-Bold.ttf
+          weight: 700
+    
+    # Material Icons are included by default
+    # Additional icon fonts can be added here
+    - family: MaterialIcons
+      fonts:
+        - asset: assets/fonts/MaterialIcons-Regular.otf
+
+# Flutter configuration
+flutter_gen:
+  output: lib/gen/
+  line_length: 80
+  
+  integrations:
+    flutter_svg: true
+    flare_flutter: true
+    
+  fonts:
+    enabled: true
+    
+  colors:
+    enabled: true
+    inputs:
+      - assets/color/colors.xml
